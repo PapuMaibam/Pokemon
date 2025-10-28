@@ -1,29 +1,112 @@
-body{
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(to bottom,#4c367586,#6b7ad388);
-            height: 580px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            align-items: center
-            ;            
-        }
-        input{
-            height: 40px;
-            width: 500px;
-            border: none;
-            border-radius: 5px;
-            background-color: black;
-            color: rgb(15, 154, 15);  
-            margin-left: 300px;          
-        }
-        button{
-            height: 30px;
-            width: 80px;
-            border: none;
-            border-radius: 5px;
-            background: linear-gradient(to top,rgb(43, 207, 54),rgb(3, 70, 23));
-        }
-        button:hover{
-            transform: scale(1.05);
-        }
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #3d3c6b, #1e1e2f);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ====== MAIN CONTAINER ====== */
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      width: 360px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .container h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #7ee787, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ====== SEARCH BAR ====== */
+    .search-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      height: 45px;
+      width: 220px;
+      border: none;
+      border-radius: 8px;
+      padding: 0 14px;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input:focus {
+      background-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 10px #00ff99;
+    }
+
+    button {
+      height: 45px;
+      width: 90px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    /* ====== IMAGE STYLING ====== */
+    #pokemonSprite {
+      margin-top: 15px;
+      height: 120px;
+      width: 120px;
+      object-fit: contain;
+      display: none;
+      animation: fadeIn 0.8s ease-in-out;
+      filter: drop-shadow(0 0 12px #00ff88);
+    }
+
+    /* ====== ERROR MESSAGE ====== */
+    .error {
+      margin-top: 10px;
+      color: #ff6b6b;
+      font-weight: 500;
+      display: none;
+    }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
